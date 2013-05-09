@@ -33,15 +33,17 @@ public class GuiceServletConfig extends GuiceServletContextListener {
 			"server.filter", //
 			"server.server.exception", //
 			"server.server.util");
-	final List<Class<? extends ContainerRequestFilter>> requestFilters = new ArrayList<>(Arrays.asList(//
-			InitializationFilter.class, //
-			OAuthAuthenticationFilter.class, //
-			ActivityFilter.class, //
-			LoggingFilter.class));
-	final List<Class<? extends ContainerResponseFilter>> responseFilters = new ArrayList<>(Arrays.asList(//
-			LoggingFilter.class, //
-			DomainObjectResponseFilter.class, //
-			AccessControlResponseFilter.class));
+	final List<Class<? extends ContainerRequestFilter>> requestFilters = new ArrayList<Class<? extends ContainerRequestFilter>>(
+			Arrays.asList(//
+					InitializationFilter.class, //
+					OAuthAuthenticationFilter.class, //
+					ActivityFilter.class, //
+					LoggingFilter.class));
+	final List<Class<? extends ContainerResponseFilter>> responseFilters = new ArrayList<Class<? extends ContainerResponseFilter>>(
+			Arrays.asList(//
+					LoggingFilter.class, //
+					DomainObjectResponseFilter.class, //
+					AccessControlResponseFilter.class));
 
 	public GuiceServletConfig() {
 		if (Configuration.logRequests) {
