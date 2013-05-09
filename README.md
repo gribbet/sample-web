@@ -8,28 +8,29 @@ Frontent: CoffeeScript single page application.
 Backend
 ----------
 ###Requirements
-JDK 1.6
-Maven 2
-ImageMagick
+- JDK 1.6
+- Maven 2
+- ImageMagick
 
 ###Instructions
-mvn package exec:java
-navigation to http://localhost:8080/
+- mvn package exec:java
+- navigate to http://localhost:8080/
 
 ###Libraries
-Grizzly web server
-JAX-RS/Jersey
-JPA/Hibernate
-Guice
-Lucene
+-Grizzly web server
+-JAX-RS/Jersey
+-JPA/Hibernate
+-Guice
+-Lucene
 
 Frontend
 ----------
 ###Requirements
-NodeJS, npm
+- nodejs
+- npm
 
 ###Instructions
-npm install
-npm start
-navigation to http://localhost:3000/
+- npm install
+- npm start
+- navigation to http://localhost:3000/
 
