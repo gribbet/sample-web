@@ -2,7 +2,7 @@ define ["wedges/Wedge", "wedges/Route", "./Layout", "./Redirect", "./Dashboard",
 	class Page extends Route
 		constructor: ->
 			super
-				"": => new Redirect "/dashboard"
+				"": => new Redirect "/users"
 				"dashboard": => new Layout new Dashboard
 				"users": => new Layout new Users
 				"messages": => new Layout new Messages

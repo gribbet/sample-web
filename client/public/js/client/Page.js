@@ -15,7 +15,7 @@
         var _this = this;
         Page.__super__.constructor.call(this, {
           "": function() {
-            return new Redirect("/dashboard");
+            return new Redirect("/users");
           },
           "dashboard": function() {
             return new Layout(new Dashboard);
