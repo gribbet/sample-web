@@ -1,5 +1,6 @@
 package server.service.impl;
 
+import java.io.InputStream;
 import java.util.List;
 
 import javax.mail.internet.AddressException;
@@ -21,6 +22,7 @@ import org.hibernate.search.jpa.FullTextQuery;
 import org.hibernate.search.jpa.Search;
 import org.slf4j.Logger;
 
+import server.domain.Image;
 import server.domain.User;
 import server.domain.User_;
 import server.exception.InvalidParameterException;
@@ -186,8 +188,36 @@ public class UserServiceImpl extends AbstractDomainServiceImpl<Integer, User> im
 	@Transactional
 	public void create(User user) {
 		user.setPasswordHash(hashPassword(user.getPassword()));
-		user.setImage(imageService.getDefaultImage());
+		if (user.getImage() == null)
+			user.setImage(imageService.getDefaultImage());
 		super.create(user);
+	}
+
+	@Override
+	@Transactional
+	public void create(User user, InputStream imageStream) {
+		user.setInitialized(false);
+		validate(user);
+
+		if (imageStream != null) {
+			Image image = imageService.create(imageStream);
+			user.setImage(image);
+		}
+
+		user.setInitialized(true);
+
+		create(user);
+	}
+
+	@Override
+	@Transactional
+	public void modify(User user, InputStream imageStream) {
+		if (imageStream != null) {
+			Image image = imageService.create(imageStream);
+			user.setImage(image);
+		}
+
+		modify(user);
 	}
 
 	@Override

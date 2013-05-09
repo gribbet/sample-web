@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+    </head>
+    <body>
+        <!-- BEGIN TEMPLATE -->
+        <div id="page">
+            <div class="container">
+                <div class="row">
+                    <div class="span2 offset1">
+                        <div class="navigation" />
+                    </div>
+                    <div class="span8">
+                        <div class="content" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END TEMPLATE -->
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+    </head>
+    <body>
+        <!-- BEGIN TEMPLATE -->
+        <div class="users-edit">
+            <form class="form-horizontal">
+                <div class="form" />
+                <div class="control-group">
+                    <div class="control-group">
+                        <div class="controls">
+                            <button type="submit" class="save btn btn-primary">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- END TEMPLATE -->
+    </body>
+</html>

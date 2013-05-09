@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+    </head>
+    <body>
+        <!-- BEGIN TEMPLATE -->
+        <div class="domain-table">
+            <div class="pagination pagination-small pagination-centered">
+                <ul><li /></ul>
+            </div>
+            <table class="table">
+                <thead><tr><th /></tr></thead>
+                <tbody><tr><td /></tr></tbody>
+            </table>
+            <div class="pagination pagination-small pagination-centered">
+                <ul><li /></ul>
+            </div>
+        </div>
+        <!-- END TEMPLATE -->
+    </body>
+</html>

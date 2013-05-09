@@ -1,0 +1,16 @@
+{
+	"name": "client",
+	"description": "Sample Web Client",
+	"version": "0.0.1",
+	"private": "true",
+	"dependencies": {
+		"connect": "2.7.2",
+		"less-middleware": "0.1.9",
+		"connect-coffee-script": "0.1.1",
+		"send": "0.1.0",
+		"requirejs": "2.1.4"
+	},
+	"scripts": {
+		"start": "coffee server.coffee"
+	}
+}

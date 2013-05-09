@@ -1,6 +1,5 @@
 package server.domain;
 
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -62,6 +61,7 @@ public class User extends DomainObject<Integer> {
 	@Modifiable
 	private String passwordHash;
 	@OneToOne
+	@Modifiable
 	private Image image;
 	@OneToMany(mappedBy = "user", cascade = { CascadeType.ALL }, orphanRemoval = true)
 	private List<Message> messages = new ArrayList<Message>();

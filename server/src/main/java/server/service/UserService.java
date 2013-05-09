@@ -1,6 +1,6 @@
 package server.service;
 
-
+import java.io.InputStream;
 import java.util.List;
 
 import server.domain.User;
@@ -19,6 +19,10 @@ public interface UserService extends AbstractDomainService<Integer, User> {
 			return valueOf(value.toUpperCase());
 		}
 	}
+
+	public void create(User user, InputStream imageStream);
+
+	public void modify(User user, InputStream imageStream);
 
 	public List<User> list(String query, SortType sort, boolean reverse, Integer start, Integer count);
 

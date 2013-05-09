@@ -64,6 +64,17 @@ public class UserResource extends BaseResource {
 		return Response.status(Status.CREATED).entity(user).build();
 	}
 
+	@POST
+	@Consumes(MediaType.MULTIPART_FORM_DATA)
+	public Response create(@FormDataParam("user") User user, @FormDataParam("image") InputStream imageStream) {
+		if (user == null)
+			throw new MissingPartException("user");
+		requireAdmin();
+		userService.create(user, imageStream);
+		logger.info("Created " + user);
+		return Response.status(Status.CREATED).entity(user).build();
+	}
+
 	@GET
 	@Path("/{id}")
 	public User find(@PathParam("id") Integer id) {
@@ -78,6 +89,16 @@ public class UserResource extends BaseResource {
 		requireUser(user);
 		user.setId(id);
 		user = userService.modify(user);
+		logger.info("Modified " + user);
+		return user;
+	}
+
+	@PUT
+	@Path("/{id}")
+	@Consumes(MediaType.MULTIPART_FORM_DATA)
+	public User modify(@FormDataParam("user") User user, @FormDataParam("image") InputStream imageStream) {
+		requireAdmin();
+		userService.modify(user, imageStream);
 		logger.info("Modified " + user);
 		return user;
 	}
@@ -102,9 +123,9 @@ public class UserResource extends BaseResource {
 
 	@GET
 	@Path("/{id}/messages/count")
-	public Integer songs(@PathParam("id") Integer id) {
+	public Integer users(@PathParam("id") Integer id) {
 		User user = load(id);
-		logger.info("Count Songs for " + user);
+		logger.info("Count Messages for " + user);
 		return messageService.count(user);
 	}
 

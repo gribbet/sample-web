@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+    </head>
+    <body>
+        <!-- BEGIN TEMPLATE -->
+        <div class="dashboard">
+            <div class="page-header"><h1>Sample Web Client</h1></div>
+            <div class="subcontent">
+                <div class="row">
+                    <div class="span4">
+                        <h3>Hourly API Activity</h3>
+                        <canvas class="hourly graph" width="400" height="300" />
+                    </div>
+                    <div class="span4">
+                        <h3>Daily API Activity</h3>
+                        <canvas class="daily graph" width="400" height="300" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END TEMPLATE -->
+    </body>
+</html>

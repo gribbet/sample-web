@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+    </head>
+    <body>
+        <!-- BEGIN TEMPLATE -->
+        <div class="pagination pagination-small pagination-centered">
+            <ul>
+                <li class="disabled"><a href="#">&lt;</a></li>
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">&gt;</a></li>
+            </ul>
+        </div>
+        <div class="edit-delete-buttons buttons btn-group">
+            <a href="#" class="edit btn btn-small"><i class="icon-edit"></i>Edit</a>
+            <a href="#" class="delete btn btn-small"><i class="icon-remove"></i>Delete</a>
+        </div>
+        <div class="select-button buttons btn-group">
+            <a href="#" class="select btn btn-small">Select</a>
+        </div>
+        <div class="field control-group">
+            <label class="control-label"></label>
+            <div class="controls" />
+        </div>
+        <div class="text-control controls">
+            <input type="text" />
+        </div>
+        <div class="textarea-control controls">
+            <textarea />
+        </div>
+        <div class="date-control controls">
+            <input type="date" />
+        </div>
+        <div class="file-control controls">
+            <input type="file" class="hide" />
+            <div class="input input-append">
+                <div class="file uneditable-input" />
+                <a class="select btn">Select</a>
+            </div>
+        </div>
+        <div class="user-control controls">
+            <div class="input input-append">
+                <div class="uneditable-input">
+                    <a class="link">Round</a>
+                </div>
+                <a class="select btn">Select</a>
+            </div>
+        </div>
+        <!-- END TEMPLATE -->
+    </body>
+</html>

@@ -53,6 +53,8 @@ public class MessageServiceImpl extends AbstractDomainServiceImpl<Integer, Messa
 	@Override
 	@Transactional
 	public void create(Message message) {
+		validate(message);
+
 		message.setTime(new Date());
 
 		message.setUser(userService.find(message.getUser()));

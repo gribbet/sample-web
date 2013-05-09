@@ -39,6 +39,7 @@ public class Message extends DomainObject<Integer> {
 	@Version
 	private int version;
 	@ManyToOne
+	@Modifiable
 	private User user;
 	@Column(nullable = false)
 	@Temporal(TemporalType.TIMESTAMP)

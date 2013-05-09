@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+    </head>
+    <body>
+        <!-- BEGIN TEMPLATE -->
+        <div class="messages-list">
+            <div class="btn-group">
+                <a class="btn new">New</a>
+            </div>
+            <table class="table" />
+        </div>
+        <!-- END TEMPLATE -->
+    </body>
+</html>

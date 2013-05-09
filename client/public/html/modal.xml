@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+    </head>
+    <body>                    
+        <!-- BEGIN TEMPLATE -->
+        <div class="modal-container">
+            <div class="modal-backdrop fade in"></div>
+            <div class="modal">
+                <div class="modal-header">
+                    <button type="button" class="close">×</button>
+                    <h3 class="title">Modal header</h3>
+                </div>
+                <div class="modal-body">
+                    <div class="content" />
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn ok">OK</a>
+                </div>
+            </div>
+        </div>
+        <!-- END TEMPLATE -->
+    </body>
+</html>

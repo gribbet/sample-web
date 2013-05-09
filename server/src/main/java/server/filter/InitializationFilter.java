@@ -30,11 +30,13 @@ public class InitializationFilter implements ContainerRequestFilter {
 				user.setName("Test User");
 				userService.create(user);
 
-				Message message = new Message();
-				message.setUser(user);
-				message.setSubject("Test message");
-				message.setMessage("Content");
-				messageService.create(message);
+				for (int i = 1; i <= 25; i++) {
+					Message message = new Message();
+					message.setUser(user);
+					message.setSubject("Test message " + i);
+					message.setMessage("");
+					messageService.create(message);
+				}
 
 				initialized = true;
 			}
