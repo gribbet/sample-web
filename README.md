@@ -32,5 +32,5 @@ Frontend
 ###Instructions
 - npm install
 - npm start
-- navigation to http://localhost:3000/
+- navigate to http://localhost:3000/
 
