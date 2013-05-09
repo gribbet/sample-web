@@ -1,6 +1,5 @@
 package server.service.impl;
 
-
 import java.util.Random;
 
 import server.domain.Authentication;
@@ -21,8 +20,10 @@ public class AuthenticationServiceImpl extends AbstractDomainServiceImpl<String,
 	@Override
 	@Transactional
 	public void create(Authentication authentication) {
-		authentication.setKey(HashUtil.hash("" + random.nextDouble()));
-		authentication.setSecret(HashUtil.hash("" + random.nextDouble()));
+		if (authentication.getKey() == null)
+			authentication.setKey(HashUtil.hash("" + random.nextDouble()));
+		if (authentication.getSecret() == null)
+			authentication.setSecret(HashUtil.hash("" + random.nextDouble()));
 		super.create(authentication);
 	}
 }

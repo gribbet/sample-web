@@ -2,8 +2,10 @@ package server.filter;
 
 import javax.ws.rs.ext.Provider;
 
+import server.domain.Authentication;
 import server.domain.Message;
 import server.domain.User;
+import server.service.AuthenticationService;
 import server.service.MessageService;
 import server.service.UserService;
 
@@ -15,6 +17,8 @@ import com.sun.jersey.spi.container.ContainerRequestFilter;
 public class InitializationFilter implements ContainerRequestFilter {
 	private boolean initialized = false;
 	@Inject
+	private AuthenticationService authenticationService;
+	@Inject
 	private UserService userService;
 	@Inject
 	private MessageService messageService;
@@ -23,6 +27,13 @@ public class InitializationFilter implements ContainerRequestFilter {
 	public ContainerRequest filter(ContainerRequest request) {
 		synchronized (this) {
 			if (!initialized) {
+				Authentication authentication = new Authentication();
+				authentication.setName("Admin");
+				authentication.setAdmin(true);
+				authentication.setKey("d48e11e48b6d5a60dcbb3be8a2774dcd0b9cb5fc");
+				authentication.setSecret("af5af75814a37b499dc8655d4d440d781164c9a5");
+				authenticationService.create(authentication);
+
 				User user = new User();
 				user.setUsername("test");
 				user.setEmail("test@test.com");

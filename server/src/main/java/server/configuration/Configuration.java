@@ -4,7 +4,7 @@ public class Configuration {
 	public static String host = "0.0.0.0";
 	public static Integer port = 8080;
 	public static String baseUri = "http://localhost:8080/";
-	public static Boolean secure = false;
+	public static Boolean secure = true;
 	public static Boolean logRequests = false;
 	public static Integer stopPort = 8099;
 	public static Boolean useSsl = false;
