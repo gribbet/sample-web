@@ -122,10 +122,16 @@ public class ImageServiceImpl extends AbstractDomainServiceImpl<Integer, Image> 
 		Image image = findDefaultImage();
 		if (image != null)
 			return image;
-		image = create(getClass().getResourceAsStream("/default.png"));
-		image.setDefault(true);
-		create(image);
-		return image;
+
+		try {
+			image = create(getClass().getResourceAsStream("/default.png"));
+			image.setDefault(true);
+			create(image);
+			return image;
+		} catch (ServerException e) {
+			logger.error("Could not create default image");
+			return null;
+		}
 	}
 
 	private Image findDefaultImage() {
