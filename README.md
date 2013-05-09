@@ -1,9 +1,9 @@
 sample-web
 ==========
 
-A sample web application backend and frontend. 
-Backend: Java REST API with OAuth authentication.
-Frontent: CoffeeScript single page application.
+A sample web application backend and frontend.  
+Backend: Java REST API with OAuth authentication.  
+Frontent: CoffeeScript single page application.  
 
 Backend
 ----------
