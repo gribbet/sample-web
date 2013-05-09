@@ -57,7 +57,7 @@ public class GuiceServletConfig extends GuiceServletContextListener {
 		return Guice.createInjector(domainModule(), new ServletModule() {
 			@Override
 			protected void configureServlets() {
-				Map<String, String> properties = new HashMap<>();
+				Map<String, String> properties = new HashMap<String, String>();
 				properties.put("com.sun.jersey.config.property.packages", StringUtils.join(resourcePackages, ", "));
 				properties.put("com.sun.jersey.spi.container.ContainerRequestFilters",
 						StringUtils.join(requestFilters, ", ").replaceAll("class ", ""));
