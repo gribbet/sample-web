@@ -17,11 +17,11 @@ Backend
 - navigate to http://localhost:8080/
 
 ###Libraries
--Grizzly web server
--JAX-RS/Jersey
--JPA/Hibernate
--Guice
--Lucene
+- Grizzly web server
+- JAX-RS/Jersey
+- JPA/Hibernate
+- Guice
+- Lucene
 
 Frontend
 ----------
