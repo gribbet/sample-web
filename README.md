@@ -3,7 +3,7 @@ sample-web
 
 A sample web application backend and frontend.  
 Backend: Java REST API with OAuth authentication.  
-Frontent: CoffeeScript single page application. Chrome only.
+Frontent: CoffeeScript single page application. Chrome only. Try it out at http://173.230.144.77:3000/
 
 Backend
 ----------
